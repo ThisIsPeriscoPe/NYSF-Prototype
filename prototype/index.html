@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NYSF Website Prototype | Review console</title>
+<link rel="stylesheet" href="../nysf-component-library/brand.css">
+<style>
+body{background:var(--bg)}
+.rev-top{background:var(--navy);border-bottom:1px solid var(--line-navy)}
+.rev-top .nav{height:70px}
+.rev-top .logo img{height:32px}
+.rev-tag{color:#9fb0b7;font-size:13px;font-weight:500}
+.rev-tag b{color:var(--gold)}
+.rev-head{padding:46px 0 10px}
+.rev-head .eyebrow{color:var(--flare)}
+.rev-head h1{font-size:clamp(30px,4vw,44px);letter-spacing:-1px}
+.rev-head p{color:var(--ink-soft);max-width:620px;margin-top:10px;font-size:17px}
+/* prominent guidance */
+.howto{display:flex;gap:22px;align-items:flex-start;background:var(--navy);color:var(--light);border-radius:var(--r-lg);padding:34px 38px;margin:28px 0 8px;position:relative;overflow:hidden}
+.howto .molecule{opacity:.35}
+.howto .ic{position:relative;flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:var(--gold);color:var(--navy);display:flex;align-items:center;justify-content:center}
+.howto .tx{position:relative}
+.howto h2{color:var(--light);font-size:22px;margin-bottom:8px}
+.howto p{color:#d6dee1;font-size:15.5px;max-width:880px}
+.howto b{color:var(--gold)}
+/* launchers */
+.launch{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:8px}
+.lcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-sm);transition:.25s;text-decoration:none;color:inherit}
+.lcard:hover{transform:translateY(-5px);border-color:var(--gold)}
+.lcard .ph{aspect-ratio:16/9;position:relative;overflow:hidden;background:var(--twilight)}
+.lcard .ph img{width:100%;height:100%;object-fit:cover}
+.lcard .ph .pill{position:absolute;top:14px;left:14px;background:var(--gold);color:var(--navy);font-weight:700;font-size:11px;letter-spacing:1px;padding:5px 12px;border-radius:var(--r-pill)}
+.lcard .b{padding:26px 28px}
+.lcard h3{font-family:var(--display);font-size:22px;margin-bottom:6px}
+.lcard p{color:var(--ink-soft);font-size:14.5px;margin-bottom:14px}
+.lcard .open{font-weight:600;font-size:14px;color:var(--flare)}
+.lcard-wide{flex-direction:row;align-items:stretch}
+.lcard-wide .ph{flex:0 0 48%;aspect-ratio:auto;min-height:300px}
+.lcard-wide .b{align-self:center;padding:44px}
+.lcard-wide h3{font-size:28px}
+@media(max-width:760px){.lcard-wide{flex-direction:column}.lcard-wide .ph{flex:auto;aspect-ratio:16/9;min-height:0}}
+/* library list */
+.lib-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.lib-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow-sm);transition:.2s;text-decoration:none;color:inherit}
+.lib-card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.lib-card .num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;background:var(--navy);color:var(--gold);font-family:var(--display);font-weight:700;font-size:14px;margin-bottom:12px}
+.lib-card h4{font-family:var(--display);font-size:16px;margin-bottom:4px}
+.lib-card small{color:var(--ink-soft);font-size:12.5px;line-height:1.4;display:block}
+.row-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:36px 0 16px}
+.row-head h2{font-size:20px;font-family:var(--display)}
+.row-head span{color:var(--ink-soft);font-size:13.5px}
+@media(max-width:900px){.launch{grid-template-columns:1fr}.lib-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.lib-grid{grid-template-columns:1fr}.howto{flex-direction:column;gap:14px}}
+</style>
+</head>
+<body>
+
+<!-- top bar -->
+<header class="site-header rev-top">
+  <div class="wrap nav">
+    <a class="logo" href="index.html"><img src="../assets/logo/nysf-logo-white.png" alt="National Youth Science Forum"></a>
+    <span class="rev-tag"><b>Prototype</b> · client review, not the live website</span>
+  </div>
+</header>
+
+<div class="wrap">
+  <!-- title -->
+  <div class="rev-head">
+    <span class="eyebrow">Review console</span>
+    <h1>NYSF website prototype</h1>
+    <p>A working preview of the new site's design direction, plus the complete library of page modules it's built from.</p>
+  </div>
+
+  <!-- PROMINENT guidance -->
+  <div class="howto"><div class="molecule"></div>
+    <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></span>
+    <div class="tx">
+      <h2>How to use this prototype</h2>
+      <p>The <b>homepage</b> shows the design direction in full; the <b>module library</b> shows the kit of parts each page is built from. Use these as the design parameters that frame your copy: lengths, tone, image ratios and calls to action, so content and design land together. Placeholder imagery and copy are illustrative; final words and photos are yours.</p>
+    </div>
+  </div>
+
+  <!-- launchers -->
+  <div class="row-head"><h2>Open the prototype</h2><span>Live, clickable website</span></div>
+  <a class="lcard lcard-wide" href="homepage.html">
+    <div class="ph"><span class="pill">FULL PROTOTYPE</span><img src="../assets/images/web/hero-cohort.jpg" alt="NYSF website prototype"></div>
+    <div class="b"><h3>Enter the website prototype</h3><p>The complete, clickable NYSF site: homepage, the six audience hubs, programs, impact, resources, donate and more. Start here and navigate freely through the nav and links.</p><span class="open">Open the prototype →</span></div>
+  </a>
+
+  <!-- module library -->
+  <div class="row-head" id="library"><h2>Module library</h2><span>Reference only: the kit of parts</span></div>
+  <div class="lib-grid">
+    <a class="lib-card" href="../nysf-component-library/kit-01-globals-heroes.html"><span class="num">01</span><h4>Globals &amp; heroes</h4><small>Header, menu, banner, 4 heroes, footer</small></a>
+    <a class="lib-card" href="../nysf-component-library/kit-02-marketing.html"><span class="num">02</span><h4>Marketing blocks</h4><small>Features, counters, testimonials, pricing, FAQ, CTA</small></a>
+    <a class="lib-card" href="../nysf-component-library/kit-03-courses.html"><span class="num">03</span><h4>Course blocks</h4><small>Cards, grids, detail, curriculum, reviews</small></a>
+    <a class="lib-card" href="../nysf-component-library/kit-04-instructors.html"><span class="num">04</span><h4>Mentor blocks</h4><small>Grids, profile, become-a-mentor</small></a>
+    <a class="lib-card" href="../nysf-component-library/kit-05-events-commerce.html"><span class="num">05</span><h4>Events &amp; commerce</h4><small>Events, shop, product, cart, checkout</small></a>
+    <a class="lib-card" href="../nysf-component-library/kit-06-forms-utility.html"><span class="num">06</span><h4>Forms &amp; utility</h4><small>Contact, login, 404, coming-soon, icons</small></a>
+    <a class="lib-card" href="../nysf-component-library/kit-07-guided-entry.html"><span class="num">07</span><h4>Guided entry tool</h4><small>The "Find your path" pathway tool</small></a>
+  </div>
+
+  <div style="height:60px"></div>
+</div>
+
+</body>
+</html>

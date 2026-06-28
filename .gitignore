@@ -1,0 +1,37 @@
+# OS cruft
+.DS_Store
+**/.DS_Store
+
+# Confidential source material (not for the public site)
+*.pdf
+*.docx
+inlingua-recreation.html
+joey-wireframes/
+NYSF-Prototype-V2/
+
+# Internal project notes
+BUILD-RULES.md
+PAGE-MAP.md
+PROJECT-STATE.md
+
+# Heavy / unused media
+assets/videos/
+assets/images/Board Members/
+assets/**/*.txt
+assets/IMAGE-MANIFEST.md
+
+# Raw photo set: ignore top-level photos, keep only the ones the kit pages use
+assets/images/*.JPG
+assets/images/*.jpg
+assets/images/*.jpeg
+assets/images/*.png
+!assets/images/1000007117.jpeg
+!assets/images/182.JPG
+!assets/images/327.JPG
+!assets/images/IMG_6959.JPG
+!assets/images/IMG_7366.JPG
+!assets/images/IMG_7546.JPG
+!assets/images/IMG_8655.JPG
+!assets/images/IMG_9945.JPG
+!assets/images/NYSF-BotanicGdnLab-6Jan2017-02.jpg
+!assets/images/NYSF2017-32.jpg

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NYSF Kit · 01 Globals &amp; Heroes</title>
+<link rel="stylesheet" href="brand.css">
+</head>
+<body>
+<div class="kitnav"><div class="wrap kitnav-in"><div class="kitnav-left"><a href="../prototype/index.html">Index</a><a href="../prototype/homepage.html">Homepage prototype</a></div><div class="kitnav-pills"><a href="kit-01-globals-heroes.html" class="active">01</a><a href="kit-02-marketing.html">02</a><a href="kit-03-courses.html">03</a><a href="kit-04-instructors.html">04</a><a href="kit-05-events-commerce.html">05</a><a href="kit-06-forms-utility.html">06</a><a href="kit-07-guided-entry.html">07</a></div><div class="kitnav-nav"><a class="prev disabled">‹ Prev</a><a class="next" href="kit-02-marketing.html">Next ›</a></div></div></div>
+
+<!-- kit header -->
+<div class="kit-head"><div class="wrap"><h1>NYSF component library · 01</h1><p>Global elements &amp; hero variants — Solar brand. Placeholder imagery; real NYSF photos slot in at page assembly.</p></div></div>
+
+<!-- ===== 01 HEADER ===== -->
+<div class="kit-label"><span class="id">01</span><h3>Header bar</h3><small>Logo · dropdown nav · search · cart · account · primary button</small></div>
+<div class="kit-frame"><div class="demo">
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="#"><img src="../assets/logo/nysf-logo-white.png" alt="National Youth Science Forum"></a>
+    <ul class="menu">
+      <li class="active"><a href="#">Home <svg class="caret" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.4"/></svg></a></li>
+      <li><a href="#">Courses <svg class="caret" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.4"/></svg></a></li>
+      <li><a href="#">Mentors <svg class="caret" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.4"/></svg></a></li>
+      <li><a href="#">Pages <svg class="caret" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.4"/></svg></a></li>
+      <li><a href="#">Blog <svg class="caret" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" fill="none" stroke-width="1.4"/></svg></a></li>
+      <li><a href="#">Contact us</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="icon-btn" href="#" aria-label="Cart"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg><span class="cart-badge">0</span></a>
+      <a class="icon-btn" href="#" aria-label="Search"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></a>
+      <a class="login" href="#">Log in / Sign up</a>
+      <a class="btn btn-gold" href="#">Get started <span class="ar"><svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 7h11M8 3l4 4-4 4"/></svg></span></a>
+      <button class="menu-toggle" onclick="document.getElementById('oc').classList.add('open')"><svg width="26" height="26" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+</header>
+</div></div>
+
+<!-- ===== 02 OFF-CANVAS MENU ===== -->
+<div class="kit-label"><span class="id">02</span><h3>Off-canvas mobile menu</h3><small>Tap the burger in the header above (or this button) to preview</small></div>
+<div class="kit-frame"><button class="btn btn-ghost btn-sm" onclick="document.getElementById('oc').classList.add('open')">Open mobile menu</button></div>
+<div class="offcanvas" id="oc">
+  <div class="scrim" onclick="this.parentElement.classList.remove('open')"></div>
+  <div class="panel">
+    <button class="x" onclick="document.getElementById('oc').classList.remove('open')"><svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <a href="#">Home</a><a href="#">Courses</a><a href="#">Mentors</a><a href="#">Pages</a><a href="#">Blog</a><a href="#">Contact us</a>
+    <a class="btn btn-gold btn-sm" style="margin-top:18px" href="#">Get started</a>
+  </div>
+</div>
+
+<!-- ===== 03 PAGE-TITLE BANNER ===== -->
+<div class="kit-label"><span class="id">03</span><h3>Inner page-title banner</h3><small>Breadcrumb + heading + decorative Solar shapes — used atop every inner page</small></div>
+<div class="kit-frame"><div class="demo">
+<section class="page-banner">
+  <span class="shape-a"></span><span class="shape-b"></span>
+  <div class="wrap">
+    <div class="crumb"><a href="#">Home</a> › About us</div>
+    <h1>About us</h1>
+  </div>
+</section>
+</div></div>
+
+<!-- ===== 04 HERO A ===== -->
+<div class="kit-label"><span class="id">04</span><h3>Hero A — split with floating stats</h3><small>Headline + arch photo panel (echoes the logo dome) + floating stat cards. Home 1 default.</small></div>
+<div class="kit-frame"><div class="demo">
+<section class="heroA"><div class="wrap grid">
+  <div>
+    <svg class="bubble" viewBox="0 0 90 80" fill="none"><path d="M12 8h54c8 0 14 6 14 14v22c0 8-6 14-14 14H40l-16 14 2-14h-2C12 58 6 52 6 44V22C6 14 8 8 12 8z" fill="#EFAF3A"/><path d="M32 30v14M45 26v18M58 32v12" stroke="#092938" stroke-width="5" stroke-linecap="round"/></svg>
+    <h1>Where curiosity meets a STEM future</h1>
+    <p class="lead">A trusted platform built by young Australians, for young Australians, supporting every learner from school to science.</p>
+    <div class="cta"><a class="btn btn-gold" href="#">Request free trial <span class="ar">→</span></a><a class="btn btn-ghost" href="#">Explore courses <span class="ar">→</span></a></div>
+  </div>
+  <div class="visual">
+    <div class="photo"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=900&auto=format&fit=crop" alt=""></div>
+    <div class="float community"><div class="avatars"><span style="background-image:url('https://i.pravatar.cc/60?img=12')"></span><span style="background-image:url('https://i.pravatar.cc/60?img=32')"></span><span style="background-image:url('https://i.pravatar.cc/60?img=45')"></span><span style="background-image:url('https://i.pravatar.cc/60?img=5')"></span></div><div><small>Join our community of</small><b>1200+ students</b></div></div>
+    <div class="float gauge"><div class="gauge-arc"><svg viewBox="0 0 74 40"><path d="M5 38a32 32 0 0 1 64 0" fill="none" stroke="#e7d9bd" stroke-width="6" stroke-linecap="round"/><path d="M5 38a32 32 0 0 1 56-19" fill="none" stroke="#EFAF3A" stroke-width="6" stroke-linecap="round"/></svg><b>87.6%</b></div><small>Completion rate of our courses</small></div>
+    <div class="float sold"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#092938" stroke-width="1.6"><path d="M4 19V5a2 2 0 0 1 2-2h10l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 8h6M8 12h8"/></svg></div><div><small>Lessons completed</small><b>100,000+</b></div></div>
+  </div>
+</div></section>
+</div></div>
+
+<!-- ===== 05 HERO B ===== -->
+<div class="kit-label"><span class="id">05</span><h3>Hero B — search-led</h3><small>Centred headline + search bar + category chips. Home 2.</small></div>
+<div class="kit-frame"><div class="demo">
+<section class="heroB"><div class="molecule"></div><div class="wrap">
+  <span class="eyebrow" style="justify-content:center">Find your path</span>
+  <h1>Learn the science that shapes tomorrow</h1>
+  <p class="lead">Search hundreds of mentor-led courses across science, technology, engineering and maths.</p>
+  <div class="searchbar"><input placeholder="What do you want to learn?"><a class="btn btn-navy" href="#">Search <span class="ar">→</span></a></div>
+  <div class="search-chips"><span class="chip">Science</span><span class="chip">Robotics</span><span class="chip">Data &amp; AI</span><span class="chip">Engineering</span><span class="chip">Maths</span></div>
+</div></section>
+</div></div>
+
+<!-- ===== 06 HERO C ===== -->
+<div class="kit-label"><span class="id">06</span><h3>Hero C — image-led</h3><small>Full-bleed image + gradient + overlay stat card. Home 3.</small></div>
+<div class="kit-frame"><div class="demo">
+<section class="heroC"><div class="wrap"><div class="frame">
+  <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1200&auto=format&fit=crop" alt="">
+  <div class="overlay-card"><b>42+</b><span>years inspiring young scientists</span></div>
+  <div class="inner">
+    <h1>Twelve days. One campus. A lifetime of science.</h1>
+    <p class="lead">Step into the experience that has launched STEM careers across Australia for four decades.</p>
+    <a class="btn btn-gold" href="#">Apply now <span class="ar">→</span></a>
+  </div>
+</div></div></section>
+</div></div>
+
+<!-- ===== 07 HERO D ===== -->
+<div class="kit-label"><span class="id">07</span><h3>Hero D — copy + stat tiles</h3><small>Headline left, 2×2 stat tiles right (navy + gold accents). Home 4.</small></div>
+<div class="kit-frame"><div class="demo">
+<section class="heroD"><div class="wrap grid">
+  <div>
+    <span class="eyebrow">By youth, for youth</span>
+    <h1>Your STEM journey starts here</h1>
+    <p class="lead">Join a national community of curious minds, expert mentors and lifelong friends.</p>
+    <div class="cta" style="display:flex;gap:16px"><a class="btn btn-navy" href="#">Get started <span class="ar">→</span></a><a class="btn btn-ghost" href="#">Watch the film <span class="ar">→</span></a></div>
+  </div>
+  <div class="tiles">
+    <div class="tile"><b>13k+</b><span>Alumni nationwide</span></div>
+    <div class="tile"><b>240+</b><span>Expert mentors</span></div>
+    <div class="tile"><b>98%</b><span>Would recommend</span></div>
+    <div class="tile"><b>42+</b><span>Years running</span></div>
+  </div>
+</div></section>
+</div></div>
+
+<!-- ===== 08 FOOTER ===== -->
+<div class="kit-label"><span class="id">08</span><h3>Footer</h3><small>About + link columns + newsletter + socials + molecule texture</small></div>
+<div class="kit-frame"><div class="demo">
+<footer class="site-footer">
+  <div class="molecule"></div>
+  <div class="wrap"><div class="fgrid">
+    <div>
+      <a class="logo" href="#"><img src="../assets/logo/nysf-logo-white.png" alt="National Youth Science Forum"></a>
+      <p class="about">Inspiring young Australians to pursue careers in science, technology, engineering and maths, for more than forty years.</p>
+      <div class="fsoc"><a href="#">f</a><a href="#">x</a><a href="#">ig</a><a href="#">in</a></div>
+    </div>
+    <div class="fcol"><h6>Main menu</h6><ul><li><a href="#">Home</a></li><li><a href="#">Courses</a></li><li><a href="#">Mentors</a></li><li><a href="#">Blog</a></li><li><a href="#">Contact us</a></li></ul></div>
+    <div class="fcol"><h6>Categories</h6><ul><li><a href="#">Science</a></li><li><a href="#">Technology</a></li><li><a href="#">Engineering</a></li><li><a href="#">Mathematics</a></li></ul></div>
+    <div class="fcol"><h6>Newsletter</h6><p class="about" style="margin-top:0">Get the latest courses and offers in your inbox.</p><form class="news" onsubmit="return false"><input placeholder="Your email address"><button><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#092938" stroke-width="1.8"><path d="M1 7h11M8 3l4 4-4 4"/></svg></button></form></div>
+  </div>
+  <div class="fbottom"><span>© 2026 National Youth Science Forum. Solar identity.</span><span>Privacy policy · Terms &amp; conditions</span></div>
+  </div>
+</footer>
+</div></div>
+
+<div style="height:60px"></div>
+</body>
+</html>

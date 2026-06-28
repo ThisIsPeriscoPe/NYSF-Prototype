@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NYSF Kit · 07 Guided entry — Find your path</title>
+<link rel="stylesheet" href="brand.css">
+</head>
+<body>
+<div class="kitnav"><div class="wrap kitnav-in"><div class="kitnav-left"><a href="../prototype/index.html">Index</a><a href="../prototype/homepage.html">Homepage prototype</a></div><div class="kitnav-pills"><a href="kit-01-globals-heroes.html">01</a><a href="kit-02-marketing.html">02</a><a href="kit-03-courses.html">03</a><a href="kit-04-instructors.html">04</a><a href="kit-05-events-commerce.html">05</a><a href="kit-06-forms-utility.html">06</a><a href="kit-07-guided-entry.html" class="active">07</a></div><div class="kitnav-nav"><a class="prev" href="kit-06-forms-utility.html">‹ Prev</a><a class="next disabled">Next ›</a></div></div></div>
+
+<div class="kit-head"><div class="wrap"><h1>NYSF component library · 07</h1><p>Custom "Find your path" guided-entry tool (not theme-native). Audience tabs + dynamic "I want to…" dropdown, wired to the sitemap routes. Pick an audience, choose an option, and hit the button.</p></div></div>
+
+<!-- GUIDED ENTRY -->
+<div class="kit-label"><span class="id">36</span><h3>Guided entry — "Find your path"</h3><small>Dropdown options &amp; destinations change per audience · resolves to real sitemap URLs</small></div>
+<div class="kit-frame"><div class="demo"><section class="sec"><div class="wrap">
+  <div class="pathfinder" id="pf">
+    <div class="pf-title">Find your path</div>
+    <p class="pf-sub">Tell us who you are and what you're after — we'll point you to the right place.</p>
+
+    <span class="pf-label">I am a…</span>
+    <div class="pf-audience" id="pf-aud">
+      <div class="pf-aud active" data-aud="student"><div class="ai"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/></svg></div><span>Student</span></div>
+      <div class="pf-aud" data-aud="educator"><div class="ai"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><span>Educator</span></div>
+      <div class="pf-aud" data-aud="parent"><div class="ai"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20a6 6 0 0 1 12 0M14 20a5 5 0 0 1 7-4.6"/></svg></div><span>Parent</span></div>
+      <div class="pf-aud" data-aud="partner"><div class="ai"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M9 21v-6h6v6"/></svg></div><span>Partner</span></div>
+      <div class="pf-aud" data-aud="alumni"><div class="ai"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg></div><span>Alumni</span></div>
+      <div class="pf-aud" data-aud="supporter"><div class="ai"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 22l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></div><span>Supporter</span></div>
+    </div>
+
+    <div class="pf-row">
+      <span class="pf-label">I want to…</span>
+      <div class="pf-intent">
+        <div class="pf-select" id="pf-select"><span id="pf-selected">Select an option</span><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+        <div class="pf-options" id="pf-options"></div>
+      </div>
+    </div>
+
+    <button class="btn btn-gold pf-go" id="pf-go" disabled>Show me what's available <span class="ar">→</span></button>
+
+    <div class="pf-result" id="pf-result">
+      <span class="rico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <div class="rt">We'd take you to <b id="pf-dest-label"></b><br><span class="path" id="pf-dest-path"></span></div>
+      <a class="rgo" id="pf-dest-link" href="#">Go there →</a>
+    </div>
+  </div>
+
+  <p style="text-align:center;color:var(--ink-soft);font-size:14px;margin-top:22px">Tip: the same component also has an <code>on-navy</code> variant for placing on a dark hero — add class <code>on-navy</code> to <code>.pathfinder</code>.</p>
+</div></section></div></div>
+
+<div style="height:60px"></div>
+
+<script>
+/* Audience → intents, wired to the NYSF Sitemap Journey routes. */
+const PATHS = {
+  student: { label:'Student', intents:[
+    {b:'Explore programs',           s:'Programs filtered for students',          url:'/students#programs'},
+    {b:'Understand what NYSF is',    s:'Why NYSF',                                 url:'/about/why-nysf'},
+    {b:'Get involved',               s:'How to apply',                             url:'/about/get-involved#how-to-apply'},
+    {b:'See outcomes & impact',      s:'Student outcomes',                         url:'/resources/article/student-outcomes'},
+    {b:'Read the latest stories',    s:'Stories for students',                     url:'/students#stories'},
+  ]},
+  educator: { label:'Educator', intents:[
+    {b:'Explore programs',           s:'Programs filtered for educators',          url:'/educators#programs'},
+    {b:'Understand what NYSF is',    s:'Why recommend NYSF',                        url:'/about/why-nysf#recommend'},
+    {b:'Get involved',               s:'For educators',                            url:'/about/get-involved#educator'},
+    {b:'See outcomes & impact',      s:'Educator outcomes',                        url:'/resources/article/educators-outcomes'},
+    {b:'Support or partner',         s:'Education partnerships',                   url:'/partners/education-partnerships'},
+    {b:'Read the latest stories',    s:'Stories for educators',                    url:'/educators#stories'},
+  ]},
+  parent: { label:'Parent', intents:[
+    {b:'Explore programs',           s:'Programs filtered for parents',            url:'/parents#programs'},
+    {b:'Understand what NYSF is',    s:'Why NYSF',                                 url:'/about/why-nysf'},
+    {b:'Get involved',               s:'Support your child',                       url:'/about/get-involved#support-your-child'},
+    {b:'See outcomes & impact',      s:'Outcomes for parents',                     url:'/resources/article/parents-outcomes'},
+    {b:'Support NYSF',               s:'Support NYSF',                             url:'/about/support-nysf'},
+    {b:'Read the latest stories',    s:'Stories for parents',                      url:'/parents#stories'},
+  ]},
+  partner: { label:'Partner or organisation', intents:[
+    {b:'Explore programs',           s:'Programs filtered for partners',           url:'/partners#programs'},
+    {b:'Understand what NYSF is',    s:'Why partner with us',                       url:'/about/why-nysf#partner'},
+    {b:'Become a partner',           s:'Partners & opportunities',                 url:'/about/partners-and-opportunities'},
+    {b:'See outcomes & impact',      s:'Impact & results',                         url:'/resources/article/impact-and-results'},
+    {b:'Support NYSF',               s:'Support NYSF',                             url:'/about/support-nysf'},
+    {b:'Donate',                     s:'Make a donation',                          url:'/donate'},
+  ]},
+  alumni: { label:'Alumni', intents:[
+    {b:'Explore programs',           s:'Alumni programs',                          url:'/resources/article/alumni-programs'},
+    {b:'Understand what NYSF is',    s:'Stay connected',                           url:'/about/why-nysf#stay-connected'},
+    {b:'Get involved',               s:'For alumni',                               url:'/about/get-involved#alumni'},
+    {b:'See outcomes & impact',      s:'Alumni outcomes',                          url:'/resources/article/alumni-outcomes'},
+    {b:'Support or partner',         s:'Support NYSF',                             url:'/about/support-nysf'},
+    {b:'Donate',                     s:'Make a donation',                          url:'/donate'},
+  ]},
+  supporter: { label:'Supporter or donor', intents:[
+    {b:'Explore programs',           s:'Programs we fund',                         url:'/resources/article/supporters-programs'},
+    {b:'Understand what NYSF is',    s:'Why NYSF',                                 url:'/about/why-nysf'},
+    {b:'Get involved',               s:'For supporters',                           url:'/about/get-involved#supporters'},
+    {b:'See outcomes & impact',      s:'Your impact',                              url:'/resources/article/supporters-impact'},
+    {b:'Support NYSF',               s:'Support NYSF',                             url:'/about/support-nysf'},
+    {b:'Donate',                     s:'Make a donation',                          url:'/donate'},
+  ]},
+};
+
+const audWrap=document.getElementById('pf-aud'),
+      sel=document.getElementById('pf-select'),
+      selLabel=document.getElementById('pf-selected'),
+      optsBox=document.getElementById('pf-options'),
+      goBtn=document.getElementById('pf-go'),
+      result=document.getElementById('pf-result');
+let current='student', chosen=null;
+
+function renderOptions(){
+  optsBox.innerHTML='';
+  PATHS[current].intents.forEach((it,i)=>{
+    const o=document.createElement('div');
+    o.className='pf-opt'+(chosen===i?' sel':'');
+    o.innerHTML='<b>'+it.b+'</b><small>'+it.s+'</small>';
+    o.onclick=()=>{chosen=i;selLabel.textContent=it.b;sel.classList.add('has-val');optsBox.classList.remove('open');sel.classList.remove('open');goBtn.disabled=false;renderOptions();};
+    optsBox.appendChild(o);
+  });
+}
+function resetIntent(){chosen=null;selLabel.textContent='Select an option';sel.classList.remove('has-val');goBtn.disabled=true;result.classList.remove('show');renderOptions();}
+
+audWrap.querySelectorAll('.pf-aud').forEach(a=>a.onclick=()=>{
+  audWrap.querySelectorAll('.pf-aud').forEach(x=>x.classList.remove('active'));
+  a.classList.add('active');current=a.dataset.aud;resetIntent();
+});
+sel.onclick=()=>{const open=optsBox.classList.toggle('open');sel.classList.toggle('open',open);};
+document.addEventListener('click',e=>{if(!e.target.closest('.pf-intent')){optsBox.classList.remove('open');sel.classList.remove('open');}});
+goBtn.onclick=()=>{
+  if(chosen===null)return;
+  const it=PATHS[current].intents[chosen];
+  document.getElementById('pf-dest-label').textContent=PATHS[current].label+' · '+it.b.toLowerCase();
+  document.getElementById('pf-dest-path').textContent=it.url;
+  document.getElementById('pf-dest-link').setAttribute('href',it.url);
+  result.classList.add('show');
+  /* In production, replace the line below to actually route:  window.location.href = it.url; */
+};
+renderOptions();
+</script>
+</body>
+</html>
