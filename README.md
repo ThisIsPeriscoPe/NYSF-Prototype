@@ -14,6 +14,10 @@ A static, fully navigable redesign prototype for the National Youth Science Foru
 - `assets/` — images and logo used by the site.
 - `index.html` (root) — redirect to the prototype.
 
+## Dev notes
+
+See **DEV-NOTES.md** for what is placeholder, what needs custom development, what depends on plugin choices, and what NYSF must be able to edit in the CMS.
+
 ## Notes
 
 Internal materials (client brief, brand guidelines, wireframes, project notes) and the unused raw photo set are intentionally excluded from this repository. The prototype uses placeholder copy; final content is to be supplied by NYSF.

@@ -113,7 +113,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 .offcanvas .x{position:absolute;top:20px;right:20px;cursor:pointer;color:var(--navy);background:none;border:none}
 
 /* ====================== GLOBAL: PAGE-TITLE BANNER ====================== */
-.page-banner{position:relative;text-align:left;padding:70px 0 78px;overflow:hidden;background:var(--bg)}
+.page-banner{position:relative;text-align:center;padding:70px 0 78px;overflow:hidden;background:var(--bg)}
 .page-banner .shape-a{position:absolute;left:-40px;top:20px;width:380px;height:300px;background:#f6ecd6;border-radius:60% 40% 50% 50%;opacity:.7}
 .page-banner .shape-b{position:absolute;right:-30px;bottom:-40px;width:300px;height:300px;background:rgba(199,62,94,.07);border-radius:30px;transform:rotate(20deg)}
 .page-banner .crumb{position:relative;font-size:14px;color:var(--ink-soft);margin-bottom:14px}
@@ -186,7 +186,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 .hero-full{position:relative;min-height:72vh;display:flex;align-items:center;overflow:hidden;padding:96px 0}
 .hero-full>.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 .hero-full>.scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(9,41,56,.9) 0%,rgba(9,41,56,.66) 40%,rgba(9,41,56,.18) 74%,rgba(9,41,56,.04) 100%)}
-.hero-full .inner{position:relative;z-index:2;color:var(--light)}
+.hero-full .inner{position:relative;z-index:2;color:var(--light);width:100%}
 .hero-full .eyebrow{color:var(--gold)}
 .hero-full h1{color:var(--light);font-size:clamp(40px,5.6vw,72px);line-height:1.02;letter-spacing:-1.5px;max-width:640px}
 .hero-full .lead{color:#e9e0cf;font-size:19px;max-width:500px;margin:20px 0 32px}
