@@ -113,11 +113,13 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 .offcanvas .x{position:absolute;top:20px;right:20px;cursor:pointer;color:var(--navy);background:none;border:none}
 
 /* ====================== GLOBAL: PAGE-TITLE BANNER ====================== */
-.page-banner{position:relative;text-align:center;padding:70px 0 78px;overflow:hidden;background:var(--bg)}
+.page-banner{position:relative;text-align:left;padding:70px 0 78px;overflow:hidden;background:var(--bg)}
 .page-banner .shape-a{position:absolute;left:-40px;top:20px;width:380px;height:300px;background:#f6ecd6;border-radius:60% 40% 50% 50%;opacity:.7}
 .page-banner .shape-b{position:absolute;right:-30px;bottom:-40px;width:300px;height:300px;background:rgba(199,62,94,.07);border-radius:30px;transform:rotate(20deg)}
 .page-banner .crumb{position:relative;font-size:14px;color:var(--ink-soft);margin-bottom:14px}
 .page-banner .crumb a{color:var(--navy);font-weight:600}
+.crumb-light{position:relative;font-size:14px;color:rgba(251,243,228,.75);margin-bottom:14px}
+.crumb-light a{color:var(--light);font-weight:600}
 .page-banner h1{position:relative;font-size:clamp(40px,5vw,64px)}
 
 /* ====================== GLOBAL: FOOTER ====================== */
@@ -267,7 +269,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 .quote .who img{width:48px;height:48px;border-radius:120px 120px 8px 8px;object-fit:cover;background:var(--twilight)}
 .quote .who b{display:block;font-family:var(--display);font-weight:600;font-size:16px} .quote .who small{color:var(--ink-soft)}
 .tnav{display:flex;gap:10px;justify-content:center;margin-top:30px}
-.tnav button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line-navy);background:transparent;color:var(--light);cursor:pointer;transition:.2s}
+.tnav button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--navy);cursor:pointer;transition:.2s;box-shadow:0 1px 4px rgba(9,41,56,.12)}
 .tnav button:hover{background:var(--gold);color:var(--navy);border-color:transparent}
 
 /* 13 Partner / logo strip */
@@ -288,12 +290,12 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 .vmodal .x{position:absolute;top:-44px;right:0;background:none;border:none;color:#fff;cursor:pointer}
 
 /* 15 Tabbed feature showcase */
-.tabsx .tabsx-nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:30px}
+.tabsx .tabsx-nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-start;margin-bottom:30px}
 .tabsx-nav button{padding:12px 22px;border-radius:var(--r-pill);border:1px solid var(--line);background:var(--card);font-family:var(--sans);font-weight:600;font-size:14.5px;color:var(--navy);cursor:pointer;transition:.2s}
 .tabsx-nav button.active{background:var(--navy);color:var(--light);border-color:var(--navy)}
 .tabsx-panel{display:none;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 .tabsx-panel.active{display:grid}
-.tabsx-panel img{border-radius:var(--r-lg);width:100%;object-fit:cover}
+.tabsx-panel img{border-radius:var(--r-lg);width:100%;aspect-ratio:16/10;object-fit:cover}
 .tabsx-panel h3{font-size:28px;margin-bottom:14px}
 .tabsx-panel p{color:var(--ink-soft);margin-bottom:18px}
 
@@ -794,7 +796,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 /* ====================== PAGE COMPOSITION (assembled site pages) ====================== */
 /* split story (image + copy) */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.split .ph{border-radius:var(--arch);overflow:hidden;aspect-ratio:5/6;background:var(--twilight)}
+.split .ph{border-radius:var(--arch);overflow:hidden;aspect-ratio:1/1;max-height:480px;background:var(--twilight)}
 .split .ph img{width:100%;height:100%;object-fit:cover}
 .split h2{font-size:clamp(30px,3.4vw,42px);margin-bottom:16px}
 .split p{color:var(--ink-soft);margin-bottom:18px}
