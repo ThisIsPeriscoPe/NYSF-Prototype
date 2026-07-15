@@ -183,7 +183,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 .heroC .overlay-card b{font-family:var(--display);font-size:34px;color:var(--navy);display:block}
 
 /* Hero C · FULL-BLEED variant — edge-to-edge image, left-aligned text overlay */
-.hero-full{position:relative;min-height:72vh;display:flex;align-items:center;overflow:hidden;padding:96px 0}
+.hero-full{position:relative;min-height:72vh;display:flex;align-items:center;overflow:hidden;padding:96px 0 128px}
 .hero-full>.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 .hero-full>.scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(9,41,56,.9) 0%,rgba(9,41,56,.66) 40%,rgba(9,41,56,.18) 74%,rgba(9,41,56,.04) 100%)}
 .hero-full .inner{position:relative;z-index:2;color:var(--light);width:100%}
@@ -191,7 +191,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 .hero-full h1{color:var(--light);font-size:clamp(40px,5.6vw,72px);line-height:1.02;letter-spacing:-1.5px;max-width:640px}
 .hero-full .lead{color:#e9e0cf;font-size:19px;max-width:500px;margin:20px 0 32px}
 .hero-full .cta{display:flex;gap:14px;flex-wrap:wrap}
-@media(max-width:620px){.hero-full{min-height:0;padding:96px 0 76px}.hero-full>.scrim{background:linear-gradient(180deg,rgba(9,41,56,.5),rgba(9,41,56,.85))}}
+@media(max-width:620px){.hero-full{min-height:0;padding:96px 0 96px}.hero-full>.scrim{background:linear-gradient(180deg,rgba(9,41,56,.5),rgba(9,41,56,.85))}}
 
 /* Hero D — copy + stat tiles row */
 .heroD{position:relative;padding:46px 0 80px;overflow:hidden}
