@@ -15,7 +15,7 @@ Reference for the development team. Four categories: placeholder content, custom
 | Contact page | Address/phone/email/map and form are placeholders — pull real details from NYSF (registered office is at ANU Campus, Leonard Huxley Building, 56 Mills Rd Acton ACT, per the T&Cs doc). |
 | Partner logos | Text-only logo placeholders in the partner strips (homepage, program pages, partners page). Replace with real logo files. Client copy requests a **rolling/marquee ticker** — see §2. |
 | Team NYSF | Andrew Giumelli has no supplied headshot — placeholder image in place. |
-| Board photos | Three supplied photo files had ambiguous names (`photo…`, `picture-1…`, `image003…`). They are assigned to Subho Banerjee, Simon Cubitt and Tanya Monro **by elimination — NYSF must verify the right face is on the right name.** |
+| Board photos | Three supplied photo files had ambiguous names (`photo…`, `picture-1…`, `image003…`). Simon Cubitt and Tanya Monro confirmed by client (16 Jul 2026); **Subho Banerjee (`picture-1…`) still to be verified by NYSF.** |
 | Form/link stand-ins | "Stay in touch" (alumni mailing list), STEM Hubs "Register interest" EOI, SSLP "Apply now", alumni submission form — all currently point to contact.html until real form URLs exist. |
 | Year 12 "Apply now" | Points to how-to-apply.html; the actual application portal URL is TBD. |
 | Hero/section photography | Drawn from the supplied photo set but crops/choices are illustrative; NYSF may re-select per page. |
