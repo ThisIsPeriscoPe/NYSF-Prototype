@@ -203,13 +203,13 @@ const PATHS={
    {b:'Understand NYSF',s:'Mission + importance',url:'/about/why-nysf-matters',c:'Take me there'},
    {b:'Get involved',s:'Volunteer, advocate',url:'/support/get-involved',c:'Take me there'},
    {b:'Learn about outcomes & impact',s:'Central impact hub',url:'/impact',c:'Take me there'},
-   {b:'Donate',s:'Strong CTA',url:'/donate',c:'Take me to donate'},
+   {b:'Donate',s:'Strong CTA',url:'/donate',c:'Take me there'},
    {b:'Read the latest stories',s:'NYSF Outlook',url:'/nysf-news',c:'Take me there'}]},
 };
 const audWrap=document.getElementById('pf-aud'),sel=document.getElementById('pf-select'),selLabel=document.getElementById('pf-selected'),optsBox=document.getElementById('pf-options'),goBtn=document.getElementById('pf-go'),goText=document.getElementById('pf-go-text'),result=document.getElementById('pf-result');
 let current='student',chosen=null;
 function renderOptions(){optsBox.innerHTML='';PATHS[current].intents.forEach((it,i)=>{const o=document.createElement('div');o.className='pf-opt'+(chosen===i?' sel':'');o.innerHTML='<b>'+it.b+'</b><small>'+it.s+'</small>';o.onclick=()=>{chosen=i;selLabel.textContent=it.b;sel.classList.add('has-val');optsBox.classList.remove('open');sel.classList.remove('open');goBtn.disabled=false;goText.textContent=it.c;renderOptions();};optsBox.appendChild(o);});}
-function resetIntent(){chosen=null;selLabel.textContent='Select an option';sel.classList.remove('has-val');goBtn.disabled=true;goText.textContent="Show me what's available";result.classList.remove('show');renderOptions();}
+function resetIntent(){chosen=null;selLabel.textContent='Select an option';sel.classList.remove('has-val');goBtn.disabled=true;goText.textContent="Take me there";result.classList.remove('show');renderOptions();}
 audWrap.querySelectorAll('.pf-aud').forEach(a=>a.onclick=()=>{audWrap.querySelectorAll('.pf-aud').forEach(x=>x.classList.remove('active'));a.classList.add('active');current=a.dataset.aud;resetIntent();});
 sel.onclick=()=>{const open=optsBox.classList.toggle('open');sel.classList.toggle('open',open);};
 document.addEventListener('click',e=>{if(!e.target.closest('.pf-intent')){optsBox.classList.remove('open');sel.classList.remove('open');}});
