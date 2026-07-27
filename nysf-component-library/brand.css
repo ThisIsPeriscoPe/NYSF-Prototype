@@ -112,8 +112,14 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 .offcanvas .x{position:absolute;top:20px;right:20px;cursor:pointer;color:var(--navy);background:none;border:none}
 
 /* ====================== GLOBAL: PAGE-TITLE BANNER ====================== */
-.page-banner{position:relative;text-align:center;padding:70px 0 78px;overflow:hidden;background:var(--bg)}
-.page-banner .shape-a{position:absolute;left:auto;right:-170px;top:50%;bottom:auto;transform:translateY(-50%);width:520px;height:520px;background:url('../assets/brand/solar.svg') center/contain no-repeat;border-radius:0;opacity:.9}
+.page-banner{position:relative;text-align:center;padding:70px 0 78px;overflow:hidden;background:var(--navy)}
+.page-banner h1{color:var(--light)}
+.page-banner p{color:#c3d1d7!important}
+.page-banner .crumb{color:#9db3bc}
+.page-banner .crumb a{color:var(--light);font-weight:600}
+.page-banner .shape-a{position:absolute;left:auto;right:-170px;top:50%;bottom:auto;width:520px;height:520px;margin-top:-260px;background:url('../assets/brand/solar.svg') center/contain no-repeat;border-radius:0;opacity:.9;animation:solarspin 80s linear infinite}
+@keyframes solarspin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.page-banner .shape-a{animation:none}}
 .page-banner .shape-b{position:absolute;left:-30px;top:auto;bottom:0;width:150px;height:6px;background:var(--gold);border-radius:0}
 .page-banner .crumb{position:relative;font-size:14px;color:var(--ink-soft);margin-bottom:14px}
 .page-banner .crumb a{color:var(--navy);font-weight:600}
@@ -249,7 +255,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 /* 10 Checklist / what you get */
 .checklist{list-style:none;display:grid;gap:14px}
 .checklist li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px}
-.checklist .tick{flex:0 0 24px;width:24px;height:24px;border-radius:50%;background:var(--gold);color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;margin-top:1px}
+.checklist .tick{flex:0 0 20px;width:20px;height:20px;border-radius:0;background:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2040%2040%22%3E%3Cpath%20d%3D%22M20%200C22.2%2011.6%2028.4%2017.8%2040%2020%2028.4%2022.2%2022.2%2028.4%2020%2040%2017.8%2028.4%2011.6%2022.2%200%2020%2011.6%2017.8%2017.8%2011.6%2020%200Z%22%20fill%3D%22%23EFAF3A%22/%3E%3C/svg%3E') center/contain no-repeat;color:transparent;font-size:0;margin-top:3px}
 
 /* 11 Stat counters band */
 .statband{position:relative;background:var(--navy);color:var(--light);border-radius:34px;padding:58px 40px;overflow:hidden}
