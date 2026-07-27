@@ -49,3 +49,9 @@ assets/images/*.png
 !assets/policies/HS3.-NYSF-South-Australia-Safeguarding-Children-and-Young-People-Safe-Environments-Policy.pdf
 assets/logos-friends/_originals/
 assets/logos-partners/_originals/
+# superseded by optimised .jpg versions
+assets/images/team/*.png
+# working backups, never deployed
+**/_originals/
+assets/images/board/_originals/
+assets/images/team/_originals/
