@@ -232,7 +232,6 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 .features{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .feature{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:34px 26px;box-shadow:var(--shadow-sm);transition:.25s}
 .feature:hover{transform:translateY(-6px)}
-.fic svg *{stroke-linecap:round;stroke-linejoin:round}
 .feature .fic{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:22px}
 .feature:nth-child(4n+1) .fic{background:var(--navy);color:var(--light)}
 .feature:nth-child(4n+2) .fic{background:var(--gold);color:var(--navy)}
@@ -890,3 +889,8 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 h1,h2,h3,h4,.sec-head h2,.split h2{text-wrap:balance}
 p.lead,.sec-head p{text-wrap:pretty}
 @media(max-width:620px){.tpanel{padding:40px 22px}}
+
+/* icon system: one stroke weight, round joins, always optically centred */
+.fic,.cic,.ic,.icon-item .dev{display:flex;align-items:center;justify-content:center}
+.fic svg,.cic svg,.ic svg,.icon-item .dev svg,.contact-card svg,.cinfo svg{stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;display:block}
+.es-detail .ico-list .ic{width:26px;height:26px;flex:0 0 26px;color:var(--twilight)}
