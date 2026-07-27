@@ -57,7 +57,7 @@ Reference for the development team. Four categories: placeholder content, custom
 
 ## 5. Client feedback round 1 (July 2026) — outcomes & open items
 
-- **Board bio pop-ups**: implemented as requested — bios pop up over the photo on hover (Who we are). **This is a CUSTOM component, not part of the theme module library: additional dev time and scope to be confirmed.** Also flagged visibly in the prototype. Mobile behaviour (tap-to-open) to be defined by dev.
+- **Board bios**: click a board member to open their bio in a modal. Assembled from two theme-native modules: the `.vmodal` overlay (as used by the video modal) holding an `.inst-profile` card (photo + role + name + bio). Only the open/close JS wiring is new, so this is a small dev task rather than a custom component. Works on touch as a tap; closes via X, scrim click or Esc.
 - **Logo tickers**: all partner/logo strips are now rolling tickers (CSS marquee, pauses on hover). Friends of NYSF logos supplied and used on the Supporters & donors page; **Australian Academy of Science supplied as EPS only — needs PNG/SVG from client**. Partner-logo strips elsewhere remain text placeholders until partner logo files are supplied.
 - **Brand pattern**: supplied pattern tile now backs all dark panels (stat bands, footer, banner arch) replacing the old CSS dot texture.
 - **Annual report (Impact page)**: client wants the page to be only an annual-report upload. AWAITING the report file — page intentionally left as-is until it arrives.
