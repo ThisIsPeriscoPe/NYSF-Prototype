@@ -265,9 +265,9 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 .stat>span{color:#c7d2d6;font-size:15px;margin-top:8px;display:block}
 
 /* 12 Testimonials carousel (Flare + Fraunces, navy panel) */
-.tpanel{position:relative;background:var(--navy);border-radius:34px;padding:60px 0;overflow:hidden}
+.tpanel{position:relative;background:var(--navy);border-radius:34px;padding:56px 48px;overflow:hidden}
 .tpanel .molecule{opacity:.4}
-.tpanel .wrap{position:relative}
+.tpanel .wrap{position:relative;padding:0;max-width:none}
 .tpanel .eyebrow{color:var(--gold)} .tpanel h2{color:var(--light)} .tpanel .sec-head p{color:#c7d2d6}
 .tcar{overflow:hidden} .tcar-track{display:flex;gap:24px;transition:transform .4s ease}
 .quote{flex:0 0 calc((100% - 48px)/3);background:var(--flare);border-radius:22px;padding:32px 28px;box-shadow:var(--shadow-sm)}
@@ -894,3 +894,4 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 /* avoid orphan words in headings */
 h1,h2,h3,h4,.sec-head h2,.split h2{text-wrap:balance}
 p.lead,.sec-head p{text-wrap:pretty}
+@media(max-width:620px){.tpanel{padding:40px 22px}}
