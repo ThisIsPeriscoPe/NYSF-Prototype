@@ -54,3 +54,15 @@ Reference for the development team. Four categories: placeholder content, custom
 ---
 
 *Build rule reminder (see BUILD-RULES.md in the parent project folder): pages are assembled only from the theme-native module library in `nysf-component-library/` — don't introduce bespoke components; the guided-entry tool and donation selector are the two approved exceptions.*
+
+## 5. Client feedback round 1 (July 2026) — outcomes & open items
+
+- **Board bio pop-ups**: client asked for hover pop-ups. Implemented natively as an accordion under the board grid; a hover/click pop-up card is CUSTOM — time and scope to be confirmed by dev (noted in the prototype itself on Who we are).
+- **Logo tickers**: all partner/logo strips are now rolling tickers (CSS marquee, pauses on hover). Friends of NYSF logos supplied and used on the Supporters & donors page; **Australian Academy of Science supplied as EPS only — needs PNG/SVG from client**. Partner-logo strips elsewhere remain text placeholders until partner logo files are supplied.
+- **Brand pattern**: supplied pattern tile now backs all dark panels (stat bands, footer, banner arch) replacing the old CSS dot texture.
+- **Annual report (Impact page)**: client wants the page to be only an annual-report upload. AWAITING the report file — page intentionally left as-is until it arrives.
+- **Year 12 video**: client wants a landscape video between "Who it's for" and "Common questions". Dropbox link was missing from the feedback doc — awaiting link/files.
+- **Stories (renamed from Resources)**: byline removed from articles; story cards remain placeholder pending migration process to be confirmed with dev.
+- **Testimonials**: now flare-tiled per brand ratio request; tagging/library infrastructure (educator/parent/hub tags) is a CMS build for dev.
+- **Footer**: single canonical footer everywhere (basics + Outlook signup). Social icons are inline SVGs: Facebook, Instagram, LinkedIn, TikTok (X removed per client).
+- **Policies page**: trimmed to the 8 client-specified policies; all 8 PDFs are in assets/policies/.
