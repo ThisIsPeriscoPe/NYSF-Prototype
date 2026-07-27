@@ -115,14 +115,12 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 .page-banner{position:relative;text-align:center;padding:70px 0 78px;overflow:hidden;background:var(--navy)}
 .page-banner h1{color:var(--light)}
 .page-banner p{color:#c3d1d7!important}
-.page-banner .crumb{color:#9db3bc}
+.page-banner .crumb{position:relative;font-size:14px;color:#9db3bc;margin-bottom:14px}
 .page-banner .crumb a{color:var(--light);font-weight:600}
 .page-banner .shape-a{position:absolute;left:auto;right:-170px;top:50%;bottom:auto;width:520px;height:520px;margin-top:-260px;background:url('../assets/brand/solar.svg?v=3') center/contain no-repeat;border-radius:0;opacity:1;animation:solarspin 80s linear infinite}
 @keyframes solarspin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){.page-banner .shape-a{animation:none}}
 .page-banner .shape-b{position:absolute;left:-30px;top:auto;bottom:0;width:150px;height:6px;background:var(--gold);border-radius:0}
-.page-banner .crumb{position:relative;font-size:14px;color:var(--ink-soft);margin-bottom:14px}
-.page-banner .crumb a{color:var(--navy);font-weight:600}
 .crumb-light{position:relative;font-size:14px;color:rgba(251,243,228,.75);margin-bottom:14px}
 .crumb-light a{color:var(--light);font-weight:600}
 .page-banner h1{position:relative;font-size:clamp(40px,5vw,64px)}
