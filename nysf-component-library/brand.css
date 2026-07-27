@@ -883,3 +883,8 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 .amt{position:relative}
 .amt.active::after{content:'';position:absolute;top:-11px;right:-11px;width:26px;height:26px;background:url('../assets/brand/burst.svg') center/contain no-repeat}
 .hero-badge{width:56px;height:56px;border-radius:50%;display:block;margin-bottom:16px;box-shadow:0 2px 10px rgba(9,41,56,.25)}
+
+/* solar graphic on image heroes: matches page-banner treatment */
+.hero-full::after{content:'';position:absolute;right:-170px;top:50%;margin-top:-260px;width:520px;height:520px;background:url('../assets/brand/solar.svg') center/contain no-repeat;opacity:.55;z-index:1;pointer-events:none;animation:solarspin 80s linear infinite}
+@media(prefers-reduced-motion:reduce){.hero-full::after{animation:none}}
+@media(max-width:900px){.hero-full::after{width:360px;height:360px;margin-top:-180px;right:-150px;opacity:.4}}
