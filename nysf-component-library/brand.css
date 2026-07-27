@@ -50,7 +50,7 @@ img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5px;line-height:1.08}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-.molecule{position:absolute;inset:0;opacity:.5;pointer-events:none;background:url('../assets/images/pattern.png') repeat;background-size:480px auto}
+.molecule{position:absolute;inset:0;opacity:.5;pointer-events:none;background:url('../assets/images/pattern.png') repeat;background-size:132px auto}
 
 /* ---- Buttons — sentence case, navy/gold per brand contrast rules ---- */
 .btn{display:inline-flex;align-items:center;gap:10px;border:none;cursor:pointer;font-family:var(--sans);font-weight:600;font-size:15px;padding:15px 26px;border-radius:var(--r-pill);transition:.25s;white-space:nowrap}
@@ -113,7 +113,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 
 /* ====================== GLOBAL: PAGE-TITLE BANNER ====================== */
 .page-banner{position:relative;text-align:center;padding:70px 0 78px;overflow:hidden;background:var(--bg)}
-.page-banner .shape-a{position:absolute;left:auto;right:-56px;bottom:-90px;top:auto;width:300px;height:340px;background:var(--navy) url('../assets/images/pattern.png') repeat;background-size:420px auto;border-radius:170px 170px 0 0;opacity:.96}
+.page-banner .shape-a{position:absolute;left:auto;right:-56px;bottom:-90px;top:auto;width:300px;height:340px;background:var(--navy) url('../assets/images/pattern.png') repeat;background-size:116px auto;border-radius:170px 170px 0 0;opacity:.96}
 .page-banner .shape-b{position:absolute;left:-30px;top:auto;bottom:0;width:150px;height:6px;background:var(--gold);border-radius:0}
 .page-banner .crumb{position:relative;font-size:14px;color:var(--ink-soft);margin-bottom:14px}
 .page-banner .crumb a{color:var(--navy);font-weight:600}
