@@ -892,3 +892,5 @@ p.lead,.sec-head p{text-wrap:pretty}
 .fic,.cic,.ic,.icon-item .dev{display:flex;align-items:center;justify-content:center}
 .fic svg,.cic svg,.ic svg,.icon-item .dev svg,.contact-card svg,.cinfo svg{stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;display:block}
 .es-detail .ico-list .ic{width:26px;height:26px;flex:0 0 26px;color:var(--twilight)}
+.emeta svg,.teacher svg,.trust svg,.share svg{stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.share a{display:inline-flex;align-items:center;justify-content:center}
