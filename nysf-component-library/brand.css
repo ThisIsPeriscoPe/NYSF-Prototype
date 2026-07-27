@@ -283,7 +283,8 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 
 /* 13 Partner / logo strip */
 .partners{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:44px}
-.partners .plogo{height:38px;display:flex;align-items:center;gap:8px;color:var(--ink-soft);font-family:var(--display);font-weight:700;font-size:20px}
+.partners .plogo{height:72px;display:flex;align-items:center;justify-content:center;gap:8px;color:var(--ink-soft);font-family:var(--display);font-weight:700;font-size:20px}
+.plogo img{max-height:100%;max-width:190px;width:auto;height:auto;object-fit:contain;display:block;mix-blend-mode:multiply}
 
 /* 14 Video popup block */
 .videoblock{position:relative;border-radius:var(--r-lg);overflow:hidden;min-height:420px;display:flex;align-items:center;justify-content:center}
@@ -889,3 +890,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 @media(prefers-reduced-motion:reduce){.hero-full::after{animation:none}}
 @media(max-width:900px){.hero-full::after{width:360px;height:360px;right:-150px;bottom:-150px}}
 @media(max-width:900px){.page-banner .shape-a{width:360px;height:360px;right:-150px;bottom:-150px}}
+
+/* avoid orphan words in headings */
+h1,h2,h3,h4,.sec-head h2,.split h2{text-wrap:balance}
+p.lead,.sec-head p{text-wrap:pretty}
