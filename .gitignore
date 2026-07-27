@@ -37,3 +37,12 @@ assets/images/*.png
 !assets/images/NYSF-BotanicGdnLab-6Jan2017-02.jpg
 !assets/images/NYSF2017-32.jpg
 .deltest
+# public policy documents (only these eight deploy)
+!assets/policies/HS1.-National-Youth-Science-Forum-Commitment-to-Child-Safety.pdf
+!assets/policies/HS4.-Bullying-and-Harassment-Policy.pdf
+!assets/policies/HR1.-Codes-of-Conduct-Policy-and-Procedures.pdf
+!assets/policies/HR6.-Privacy-Policy-and-Procedures.pdf
+!assets/policies/HS2.-NYSF-National-Child-Safety-Policy.pdf
+!assets/policies/OP1.-Infectious-Disease-and-Illness-Policy-and-Procedures.pdf
+!assets/policies/OP4.-Use-of-IT-Resources-Security-of-Information-Cyber-Security-Policy.pdf
+!assets/policies/HS3.-NYSF-South-Australia-Safeguarding-Children-and-Young-People-Safe-Environments-Policy.pdf
