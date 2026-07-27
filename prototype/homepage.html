@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>National Youth Science Forum | Find where you belong in STEM</title>
-<link rel="stylesheet" href="../nysf-component-library/brand.css?v=27">
+<link rel="stylesheet" href="../nysf-component-library/brand.css?v=28">
 <style>
 /* ---- homepage-specific compositions (page-level layout only; system lives in brand.css) ---- */
 /* page-specific only; shared composition blocks now live in brand.css */
@@ -142,8 +142,6 @@
 /* count-up */
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){const el=e.target,to=+el.dataset.to;let n=0,s=Math.max(1,Math.ceil(to/45));const k=setInterval(()=>{n+=s;if(n>=to){n=to;clearInterval(k);}el.textContent=n>=1000?n.toLocaleString():n;},22);io.unobserve(el);}});},{threshold:.5});
 document.querySelectorAll('.count').forEach(c=>io.observe(c));
-/* tabs */
-document.querySelectorAll('.tabsx-nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabsx-nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.tabsx-panel').forEach(p=>p.classList.remove('active'));document.getElementById(b.dataset.t).classList.add('active');});
 /* testimonials carousel */
 const track=document.getElementById('ttrack');let ti=0;
 function pv(){return window.innerWidth<=620?1:window.innerWidth<=980?2:3;}
