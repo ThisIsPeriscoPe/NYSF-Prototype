@@ -241,8 +241,9 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 .step:hover .num{background:var(--gold)}
 .step h4{font-size:20px;margin-bottom:8px}
 .step p{color:var(--ink-soft);font-size:14.5px}
-.steps .step:not(:last-child)::after{content:'';position:absolute;top:24px;right:-42px;width:58px;height:16px;background:url('../assets/images/arrow.svg') center/contain no-repeat}
-@media(max-width:720px){.steps .step:not(:last-child)::after{display:none}}
+.steps .step:not(:last-child)::after{content:'';position:absolute;top:23px;right:-30px;width:34px;height:18px;background:url('../assets/images/arrow.svg') center/contain no-repeat}
+.steps .step:nth-child(3n)::after{display:none}
+@media(max-width:980px){.steps .step::after{display:none!important}}
 
 /* 10 Checklist / what you get */
 .checklist{list-style:none;display:grid;gap:14px}

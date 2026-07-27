@@ -25,6 +25,7 @@ assets/images/*.JPG
 assets/images/*.jpg
 assets/images/*.jpeg
 assets/images/*.png
+!assets/images/pattern.png
 !assets/images/1000007117.jpeg
 !assets/images/182.JPG
 !assets/images/327.JPG

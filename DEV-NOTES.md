@@ -14,7 +14,7 @@ Reference for the development team. Four categories: placeholder content, custom
 | Impact page | Stats and "read the full report" link partially placeholder — NYSF supplied some figures (15k+ alumni, 750+/yr, 46% regional, 61% female & gender diverse, 74% financial assistance, $91,130 scholarships 2026) but no full impact-page copy doc. |
 | Contact page | Address/phone/email/map and form are placeholders — pull real details from NYSF (registered office is at ANU Campus, Leonard Huxley Building, 56 Mills Rd Acton ACT, per the T&Cs doc). |
 | Partner logos | Text-only logo placeholders in the partner strips (homepage, program pages, partners page). Replace with real logo files. Client copy requests a **rolling/marquee ticker** — see §2. |
-| Team NYSF | Andrew Giumelli has no supplied headshot — placeholder image in place. |
+| Team NYSF | Andrew Giumelli has no supplied headshot — currently reusing Edmund Villasis's photo as a stand-in (per Joey); replace when supplied. |
 | Board photos | Three supplied photo files had ambiguous names (`photo…`, `picture-1…`, `image003…`). Simon Cubitt and Tanya Monro confirmed by client (16 Jul 2026); **Subho Banerjee (`picture-1…`) still to be verified by NYSF.** |
 | Form/link stand-ins | "Stay in touch" (alumni mailing list), STEM Hubs "Register interest" EOI, SSLP "Apply now", alumni submission form — all currently point to contact.html until real form URLs exist. |
 | Year 12 "Apply now" | Points to how-to-apply.html; the actual application portal URL is TBD. |
@@ -57,7 +57,7 @@ Reference for the development team. Four categories: placeholder content, custom
 
 ## 5. Client feedback round 1 (July 2026) — outcomes & open items
 
-- **Board bio pop-ups**: client asked for hover pop-ups. Implemented natively as an accordion under the board grid; a hover/click pop-up card is CUSTOM — time and scope to be confirmed by dev (noted in the prototype itself on Who we are).
+- **Board bio pop-ups**: implemented as requested — bios pop up over the photo on hover (Who we are). **This is a CUSTOM component, not part of the theme module library: additional dev time and scope to be confirmed.** Also flagged visibly in the prototype. Mobile behaviour (tap-to-open) to be defined by dev.
 - **Logo tickers**: all partner/logo strips are now rolling tickers (CSS marquee, pauses on hover). Friends of NYSF logos supplied and used on the Supporters & donors page; **Australian Academy of Science supplied as EPS only — needs PNG/SVG from client**. Partner-logo strips elsewhere remain text placeholders until partner logo files are supplied.
 - **Brand pattern**: supplied pattern tile now backs all dark panels (stat bands, footer, banner arch) replacing the old CSS dot texture.
 - **Annual report (Impact page)**: client wants the page to be only an annual-report upload. AWAITING the report file — page intentionally left as-is until it arrives.
