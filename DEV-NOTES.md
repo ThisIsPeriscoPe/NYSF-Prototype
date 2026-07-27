@@ -66,3 +66,10 @@ Reference for the development team. Four categories: placeholder content, custom
 - **Testimonials**: now flare-tiled per brand ratio request; tagging/library infrastructure (educator/parent/hub tags) is a CMS build for dev.
 - **Footer**: single canonical footer everywhere (basics + Outlook signup). Social icons are inline SVGs: Facebook, Instagram, LinkedIn, TikTok (X removed per client).
 - **Policies page**: trimmed to the 8 client-specified policies; all 8 PDFs are in assets/policies/.
+
+## 6. Brand asset integration (July 2026, round 2)
+
+- Official brand elements scraped from the identity kit are now in `assets/brand/`: solar title graphic, rounded burst (cleaned SVG), and the 8-icon family (Science/Technology/Engineering/Mathematics + Students/Educators/Partners/Alumni).
+- Applied per the kit's usage rules (p4-5): solar graphic on page banners (gold on First Light = decorative); burst reserved for donate cost chips ("cost bubbles"); audience icons as hero badges on their four hub pages; STEM icons as a row on the students hub; molecule pattern kept quiet on navy panels only.
+- Accessibility: all text/background pairs verified against the kit's approved WCAG table (navy/First Light 13.7:1 AAA, gold/navy 7.8:1 AAA, flare pairs at the AA threshold, used at approved sizes). Gold is never used as text on First Light.
+- Generic stroke icons (features etc.) unified with rounded caps/joins; still interim until a full icon suite exists. **Missing official icons: Families and Supporters/Donors — requested from client** (their hub heroes have no badge until supplied).

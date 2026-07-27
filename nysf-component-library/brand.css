@@ -113,7 +113,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 
 /* ====================== GLOBAL: PAGE-TITLE BANNER ====================== */
 .page-banner{position:relative;text-align:center;padding:70px 0 78px;overflow:hidden;background:var(--bg)}
-.page-banner .shape-a{position:absolute;left:auto;right:-56px;bottom:-90px;top:auto;width:300px;height:340px;background:var(--navy) url('../assets/images/pattern-spread.png') center/cover no-repeat;border-radius:170px 170px 0 0;opacity:.96}
+.page-banner .shape-a{position:absolute;left:auto;right:-170px;top:50%;bottom:auto;transform:translateY(-50%);width:520px;height:520px;background:url('../assets/brand/solar.svg') center/contain no-repeat;border-radius:0;opacity:.9}
 .page-banner .shape-b{position:absolute;left:-30px;top:auto;bottom:0;width:150px;height:6px;background:var(--gold);border-radius:0}
 .page-banner .crumb{position:relative;font-size:14px;color:var(--ink-soft);margin-bottom:14px}
 .page-banner .crumb a{color:var(--navy);font-weight:600}
@@ -226,6 +226,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 .features{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .feature{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:34px 26px;box-shadow:var(--shadow-sm);transition:.25s}
 .feature:hover{transform:translateY(-6px)}
+.fic svg *{stroke-linecap:round;stroke-linejoin:round}
 .feature .fic{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:22px}
 .feature:nth-child(4n+1) .fic{background:var(--navy);color:var(--light)}
 .feature:nth-child(4n+2) .fic{background:var(--gold);color:var(--navy)}
@@ -871,3 +872,8 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 .ticker:hover .partners{animation-play-state:paused}
 @keyframes tickmove{to{transform:translateX(-50%)}}
 @media(max-width:980px){.page-banner .shape-a{display:none}}
+
+/* rounded burst per kit: cost bubbles only */
+.amt{position:relative}
+.amt.active::after{content:'';position:absolute;top:-11px;right:-11px;width:26px;height:26px;background:url('../assets/brand/burst.svg') center/contain no-repeat}
+.hero-badge{width:56px;height:56px;border-radius:50%;display:block;margin-bottom:16px;box-shadow:0 2px 10px rgba(9,41,56,.25)}
