@@ -13,7 +13,7 @@ Reference for the development team. Four categories: placeholder content, custom
 | Resources / News + article page | All story cards, the article itself, categories and images are placeholders. Three real story *titles* are used on homepage/hub Outlook cards but link to the placeholder article. |
 | Impact page | Stats and "read the full report" link partially placeholder — NYSF supplied some figures (15k+ alumni, 750+/yr, 46% regional, 61% female & gender diverse, 74% financial assistance, $91,130 scholarships 2026) but no full impact-page copy doc. |
 | Contact page | Address/phone/email/map and form are placeholders — pull real details from NYSF (registered office is at ANU Campus, Leonard Huxley Building, 56 Mills Rd Acton ACT, per the T&Cs doc). |
-| Partner logos | Text-only logo placeholders in the partner strips (homepage, program pages, partners page). Replace with real logo files. Client copy requests a **rolling/marquee ticker** — see §2. |
+| Partner logos | ~~Text placeholders~~ RESOLVED: 12 real partner logos supplied and live in the tickers (Rotary, UNSW, UQ, Swinburne, Monash, Qld DETSI, NSW Chief Scientist, DISR, ResMed, CSL, Atlassian, ADF Careers). Not yet supplied: ANU, University of Canberra, Lockheed Martin. |
 | Team NYSF | Andrew Giumelli has no supplied headshot — currently reusing Edmund Villasis's photo as a stand-in (per Joey); replace when supplied. |
 | Board photos | Three supplied photo files had ambiguous names (`photo…`, `picture-1…`, `image003…`). Simon Cubitt and Tanya Monro confirmed by client (16 Jul 2026); **Subho Banerjee (`picture-1…`) still to be verified by NYSF.** |
 | Form/link stand-ins | "Stay in touch" (alumni mailing list), STEM Hubs "Register interest" EOI, SSLP "Apply now", alumni submission form — all currently point to contact.html until real form URLs exist. |
@@ -24,7 +24,6 @@ Reference for the development team. Four categories: placeholder content, custom
 
 - **Donation payment flow** — checkout, receipts, recurring giving, tax statements. Build against chosen gateway/platform (see §3).
 - **"Find your path" guided-entry tool** (homepage) — custom component (approved exception to the module-library rule). Audience/intent state machine with per-intent routing; routes currently map to prototype pages and must be re-pointed at CMS URLs.
-- **Partner logo marquee** — client copy asks for a "rolling logo ticker"; current build is a static native logo strip. If the ticker is wanted, it's a small custom CSS animation over the existing `.partners` module.
 - **Form handling** — partnership enquiry (partners page), contact form, newsletter signup (footer, all pages). Wire to CRM/email per stack.
 - **Search** — header search icon is non-functional.
 - **Carousels / counters / tabs** — already implemented in vanilla JS (testimonial carousel, animated stat counters, summit day-tabs); no library needed, port as-is.
@@ -58,7 +57,7 @@ Reference for the development team. Four categories: placeholder content, custom
 ## 5. Client feedback round 1 (July 2026) — outcomes & open items
 
 - **Board bios**: click a board member to open their bio in a modal. Assembled from two theme-native modules: the `.vmodal` overlay (as used by the video modal) holding an `.inst-profile` card (photo + role + name + bio). Only the open/close JS wiring is new, so this is a small dev task rather than a custom component. Works on touch as a tap; closes via X, scrim click or Esc.
-- **Logo tickers**: all partner/logo strips are now rolling tickers (CSS marquee, pauses on hover). Friends of NYSF logos supplied and used on the Supporters & donors page; **Australian Academy of Science supplied as EPS only — needs PNG/SVG from client**. Partner-logo strips elsewhere remain text placeholders until partner logo files are supplied.
+- **Logo tickers**: all partner/logo strips are now rolling tickers (CSS marquee, pauses on hover). Friends of NYSF logos supplied and used on the Supporters & donors page; Australian Academy of Science now supplied as SVG and live in the Friends ticker. All partner strips now carry the 12 supplied partner logos.
 - **Brand pattern**: supplied pattern tile now backs all dark panels (stat bands, footer, banner arch) replacing the old CSS dot texture.
 - **Annual report (Impact page)**: client wants the page to be only an annual-report upload. AWAITING the report file — page intentionally left as-is until it arrives.
 - **Year 12 video**: client wants a landscape video between "Who it's for" and "Common questions". Dropbox link was missing from the feedback doc — awaiting link/files.
@@ -73,3 +72,10 @@ Reference for the development team. Four categories: placeholder content, custom
 - Applied per the kit's usage rules (p4-5): solar graphic on page banners (gold on First Light = decorative); burst reserved for donate cost chips ("cost bubbles"); audience icons as hero badges on their four hub pages; STEM icons as a row on the students hub; molecule pattern kept quiet on navy panels only.
 - Accessibility: all text/background pairs verified against the kit's approved WCAG table (navy/First Light 13.7:1 AAA, gold/navy 7.8:1 AAA, flare pairs at the AA threshold, used at approved sizes). Gold is never used as text on First Light.
 - Generic stroke icons (features etc.) unified with rounded caps/joins; still interim until a full icon suite exists. **Missing official icons: Families and Supporters/Donors — requested from client** (their hub heroes have no badge until supplied).
+
+## 7. Logo & brand asset handling (for dev)
+
+- Supplied raster logos had white backgrounds; each has been processed to transparent PNG (near-white cleared, edges feathered) so they sit correctly on the cream panels. Untouched originals are in `assets/logos-*/_originals/` (excluded from deploy).
+- `assets/logos-partners/` (12 files) feeds every partner ticker; `assets/logos-friends/` (10) feeds the Friends of NYSF ticker on Supporters & donors. Both should become CMS-managed lists so NYSF can add/remove logos.
+- Official brand icons now used as supplied SVGs for Students, Educators, Alumni, Technology, Engineering, Mathematics. **Still PNG-only (no SVG supplied): Science, Partners.** No icon exists for Families or Supporters/Donors.
+- Checklist ticks use the supplied `4-point-star.svg`.

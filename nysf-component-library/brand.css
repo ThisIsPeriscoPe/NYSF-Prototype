@@ -252,7 +252,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--display);font-weight:700;letter-spacing:-.5p
 /* 10 Checklist / what you get */
 .checklist{list-style:none;display:grid;gap:14px}
 .checklist li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px}
-.checklist .tick{flex:0 0 20px;width:20px;height:20px;border-radius:0;background:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2040%2040%22%3E%3Cpath%20d%3D%22M20%200C22.2%2011.6%2028.4%2017.8%2040%2020%2028.4%2022.2%2022.2%2028.4%2020%2040%2017.8%2028.4%2011.6%2022.2%200%2020%2011.6%2017.8%2017.8%2011.6%2020%200Z%22%20fill%3D%22%23EFAF3A%22/%3E%3C/svg%3E') center/contain no-repeat;color:transparent;font-size:0;margin-top:3px}
+.checklist .tick{flex:0 0 20px;width:20px;height:20px;border-radius:0;background:url('../assets/brand/star.svg') center/contain no-repeat;color:transparent;font-size:0;margin-top:3px}
 
 /* 11 Stat counters band */
 .statband{position:relative;background:var(--navy);color:var(--light);border-radius:34px;padding:58px 40px;overflow:hidden}
