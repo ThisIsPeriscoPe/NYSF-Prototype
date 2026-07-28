@@ -60,7 +60,10 @@ Reference for the development team. Four categories: placeholder content, custom
 - **Logo tickers**: all partner/logo strips are now rolling tickers (CSS marquee, pauses on hover). Friends of NYSF logos supplied and used on the Supporters & donors page; Australian Academy of Science now supplied as SVG and live in the Friends ticker. All partner strips now carry the 13 supplied partner logos.
 - **Brand pattern**: supplied pattern tile now backs all dark panels (stat bands, footer, banner arch) replacing the old CSS dot texture.
 - **Annual report (Impact page)**: client wants the page to be only an annual-report upload. AWAITING the report file — page intentionally left as-is until it arrives.
-- **Year 12 video**: client wants a landscape video between "Who it's for" and "Common questions". Dropbox link was missing from the feedback doc — awaiting link/files.
+- **Videos**: RESOLVED. Three landscape videos supplied and placed: "What is NYSF" on the Year 12 page (exactly where the client asked, between Who it's for and Common questions), "Hero" on the homepage, "Chant" on the Students hub. Each uses the theme-native `.videoblock` (poster + gold play button) opening the native `.vmodal` player.
+  - Encoded for web at 720p (28/23/21 MB originals -> 11/9/7 MB); untouched originals in `assets/videos/_originals/` (not deployed).
+  - `preload="none"` so nothing downloads until a visitor clicks play.
+  - Client-supplied transcripts converted to WebVTT captions and wired in for the two videos with dialogue (`what-is-nysf.vtt`, `nysf-hero.vtt`). The chant video has no dialogue so needs no captions. Dev: keep captions when moving to a CMS/video host, they're an accessibility requirement.
 - **Stories (renamed from Resources)**: byline removed from articles; story cards remain placeholder pending migration process to be confirmed with dev.
 - **Testimonials**: now flare-tiled per brand ratio request; tagging/library infrastructure (educator/parent/hub tags) is a CMS build for dev.
 - **Footer**: single canonical footer everywhere (basics + Outlook signup). Social icons are inline SVGs: Facebook, Instagram, LinkedIn, TikTok (X removed per client).
