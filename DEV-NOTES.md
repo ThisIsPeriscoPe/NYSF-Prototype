@@ -17,7 +17,7 @@ Reference for the development team. Four categories: placeholder content, custom
 | Team NYSF | Andrew Giumelli has no supplied headshot — currently reusing Edmund Villasis's photo as a stand-in (per Joey); replace when supplied. |
 | Board photos | Three supplied photo files had ambiguous names (`photo…`, `picture-1…`, `image003…`). Simon Cubitt and Tanya Monro confirmed by client (16 Jul 2026); **Subho Banerjee (`picture-1…`) still to be verified by NYSF.** |
 | Form/link stand-ins | "Stay in touch" (alumni mailing list), STEM Hubs "Register interest" EOI, SSLP "Apply now", alumni submission form — all currently point to contact.html until real form URLs exist. |
-| Year 12 "Apply now" | Points to how-to-apply.html; the actual application portal URL is TBD. |
+| Apply / register buttons | **Funnel now: every "Apply now" across the site -> `how-to-apply.html` -> "Start your online application".** That final button is the only place the real application portal URL is needed; it currently points to contact.html as a stand-in. Summit "Register now" uses the real Eventbrite URL. STEM Hubs "Register interest" and SSLP "Apply now" point to contact.html pending their EOI/application form URLs. |
 | Hero/section photography | Drawn from the supplied photo set but crops/choices are illustrative; NYSF may re-select per page. |
 
 ## 2. Requires custom development
