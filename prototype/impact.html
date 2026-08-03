@@ -3,12 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="../assets/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="../assets/favicon/site.webmanifest">
+<meta name="theme-color" content="#092938">
 <title>Our impact | National Youth Science Forum</title>
 <link rel="stylesheet" href="../nysf-component-library/brand.css?v=44">
 <style>.hp-nav .menu{gap:22px}.hp-nav .menu>li>a{font-size:15px}</style>
 </head>
 <body>
-<!-- DEV NOTE: impact stats/copy partially PLACEHOLDER, no client copy doc supplied for this page (see DEV-NOTES.md) -->
+<!-- DEV NOTE: ON HOLD: client wants this page reduced to an annual report download once the PDF is supplied -->
 
 <header class="site-header hp-nav">
   <div class="wrap nav">
@@ -46,14 +52,14 @@
 <a class="btn btn-gold btn-sm" style="margin-top:18px" href="contact.html">Apply now</a></div></div>
 
 <!-- BANNER -->
-<section class="page-banner"><span class="shape-a"></span><span class="shape-b"></span><div class="wrap">
+<section class="page-banner" data-module="1. Page banner" data-build="theme-native"><span class="shape-a"></span><span class="shape-b"></span><div class="wrap">
   <div class="crumb"><a href="index.html">Home</a> › Our impact</div>
   <h1>Our impact</h1>
   <p style="position:relative;color:var(--ink-soft);max-width:580px;margin:14px auto 0">For over forty years, NYSF has helped young Australians find their place in STEM. Here's what that looks like in the numbers, and in the lives behind them.</p>
 </div></section>
 
 <!-- HEADLINE STATS (prominent) -->
-<section class="sec" style="padding-top:36px"><div class="wrap"><div class="statband"><div class="molecule"></div>
+<section class="sec" style="padding-top:36px" data-module="2. Stat band (count-up)" data-build="theme-native"><div class="wrap"><div class="statband"><div class="molecule"></div>
   <div class="stats-grid">
     <div class="stat"><b><span class="count" data-to="40">0</span>+</b><span>Years of impact</span></div>
     <div class="stat"><b><span class="count" data-to="15">0</span>k+</b><span>Alumni nationwide</span></div>
@@ -63,7 +69,7 @@
 </div></div></section>
 
 <!-- OUTCOMES NARRATIVE -->
-<section class="sec"><div class="wrap"><div class="split">
+<section class="sec" data-module="3. Split (image + text), Checklist" data-build="theme-native"><div class="wrap"><div class="split">
   <div>
     <span class="eyebrow">Outcomes</span>
     <h2>Curiosity that lasts a lifetime</h2>
@@ -79,7 +85,7 @@
 </div></div></section>
 
 <!-- BY THE NUMBERS -->
-<section class="sec" style="padding-top:0"><div class="wrap">
+<section class="sec" style="padding-top:0" data-module="4. Stat band (count-up)" data-build="theme-native"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">By the numbers</span><h2>Reaching every young Australian</h2></div></div>
   <div class="statband"><div class="molecule"></div>
     <div class="stats-grid" style="grid-template-columns:repeat(3,1fr)">
@@ -91,7 +97,7 @@
 </div></section>
 
 <!-- EQUITY -->
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="split">
+<section class="sec" style="padding-top:0" data-module="5. Split (image + text)" data-build="theme-native"><div class="wrap"><div class="split">
   <div class="ph"><img src="../assets/images/web/story-community.jpg" alt="A diverse NYSF cohort"></div>
   <div>
     <span class="eyebrow">Access &amp; Equity</span>
@@ -102,7 +108,7 @@
 </div></div></section>
 
 <!-- CASE STUDIES -->
-<section class="sec" style="padding-top:0"><div class="wrap">
+<section class="sec" style="padding-top:0" data-module="6. Story cards" data-build="theme-native"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">Impact stories</span><h2>The lives behind the numbers</h2></div><a class="btn btn-ghost btn-sm" href="#">All stories <span class="ar">→</span></a></div>
   <div class="courses">
     <article class="course"><div class="thumb"><a href="article.html"><img src="../assets/images/web/news-1.jpg" alt=""></a></div><div class="body"><h3>From a regional town to a research career</h3><div class="teacher">Alumni story</div><div class="foot"><a class="enroll" href="article.html">Read more →</a></div></div></article>
@@ -112,7 +118,7 @@
 </div></section>
 
 <!-- REPORT CTA -->
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="cta-band">
+<section class="sec" style="padding-top:0" data-module="7. CTA band" data-build="theme-native"><div class="wrap"><div class="cta-band">
   <h2>Dig into the detail: read our latest impact report</h2>
   <a class="btn btn-navy" href="#" style="padding:17px 30px;font-size:16px">Download report <span class="ar"><svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 7h11M8 3l4 4-4 4"/></svg></span></a>
 </div></div></section>
@@ -131,5 +137,6 @@
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){const el=e.target,to=+el.dataset.to;let n=0,s=Math.max(1,Math.ceil(to/45));const k=setInterval(()=>{n+=s;if(n>=to){n=to;clearInterval(k);}el.textContent=n>=1000?n.toLocaleString():n;},22);io.unobserve(el);}});},{threshold:.5});
 document.querySelectorAll('.count').forEach(c=>io.observe(c));
 </script>
+<script src="module-inspector.js?v=1"></script>
 </body>
 </html>

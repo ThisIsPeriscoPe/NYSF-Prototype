@@ -55,3 +55,5 @@ assets/images/team/*.png
 **/_originals/
 assets/images/board/_originals/
 assets/images/team/_originals/
+# annual report, linked from the Stories article
+!assets/reports/nysf-annual-report-2024-25.pdf

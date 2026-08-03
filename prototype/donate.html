@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="../assets/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="../assets/favicon/site.webmanifest">
+<meta name="theme-color" content="#092938">
 <title>Donate | National Youth Science Forum</title>
 <link rel="stylesheet" href="../nysf-component-library/brand.css?v=44">
 <style>.hp-nav .menu{gap:22px}.hp-nav .menu>li>a{font-size:15px}
@@ -59,7 +65,7 @@
 <a class="btn btn-gold btn-sm" style="margin-top:18px" href="contact.html">Apply now</a></div></div>
 
 <!-- HERO -->
-<section class="hero-full" style="min-height:54vh">
+<section class="hero-full" style="min-height:54vh" data-module="1. Hero (full-bleed image)" data-build="theme-native">
   <img class="bg" src="../assets/images/web/program-hubs.jpg" alt="An NYSF student in the lab">
   <div class="scrim"></div>
   <div class="wrap inner">
@@ -72,8 +78,8 @@
 </section>
 
 <!-- GIVE -->
-<!-- DEV NOTE: donation payment module below is a PLACEHOLDER, subject to change pending dev parameters / payment plugin choice (see DEV-NOTES.md) -->
-<section class="sec" id="give"><div class="wrap"><div class="give">
+<!-- DEV NOTE: PLACEHOLDER: donation payment module is visual only, replace with the chosen payment platform -->
+<section class="sec" id="give" data-module="2. Donation amount selector, Form, Checklist" data-build="custom"><div class="wrap"><div class="give">
   <div>
     <span class="eyebrow">Your impact</span>
     <h2 style="font-size:34px;margin-bottom:16px">Every gift goes further than you'd think</h2>
@@ -99,13 +105,13 @@
 </div></div></section>
 
 <!-- WAYS TO GIVE -->
-<section class="sec" style="padding-top:0"><div class="wrap">
+<section class="sec" style="padding-top:0" data-module="3. Feature cards" data-build="theme-native"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">Ways to give</span><h2>More ways to make a difference</h2></div></div>
   <div class="features"><div class="feature"><div class="fic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.4 12a7.6 7.6 0 0 1 13-5.4l2.2 2.2"/><path d="M19.6 5v4h-4"/><path d="M19.6 12a7.6 7.6 0 0 1-13 5.4L4.4 15.2"/><path d="M4.4 19v-4h4"/></svg></div><h4>Regular giving</h4><p>A monthly gift that quietly changes lives all year.</p></div><div class="feature"><div class="fic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.6" y="7.6" width="16.8" height="11.4" rx="2.2"/><path d="M8.8 7.6V6.2a1.8 1.8 0 0 1 1.8-1.8h2.8a1.8 1.8 0 0 1 1.8 1.8v1.4"/><path d="M3.6 12.6h16.8"/></svg></div><h4>Workplace giving</h4><p>Give pre-tax through your employer, through platforms like Benevity and GoodToGive, and many will match it.</p></div><div class="feature"><div class="fic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.8 8.8 12 5.2l8.2 3.6L12 12.4z"/><path d="M7.2 10.8v3.8c0 1.7 2.2 3 4.8 3s4.8-1.3 4.8-3v-3.8"/></svg></div><h4>Scholarships</h4><p>Fund a full Access and Equity place for a student.</p></div></div>
 </div></section>
 
 <!-- QUOTE -->
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="tpanel"><div class="molecule"></div><div class="wrap" style="text-align:center">
+<section class="sec" style="padding-top:0" data-module="4. Dark panel (wrapper)" data-build="theme-native"><div class="wrap"><div class="tpanel"><div class="molecule"></div><div class="wrap" style="text-align:center">
   <div style="max-width:760px;margin:0 auto">
     <div style="font-family:var(--quote);font-style:italic;font-size:60px;line-height:.6;color:var(--gold);height:34px">“</div>
     <p style="font-family:var(--quote);font-style:italic;font-size:24px;color:var(--light);line-height:1.5;margin-bottom:18px">A scholarship meant I could say yes. I'll never forget that someone I'd never met believed I belonged in science.</p>
@@ -127,5 +133,6 @@
 document.querySelectorAll('.freq button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.freq button').forEach(x=>x.classList.remove('active'));b.classList.add('active');});
 document.querySelectorAll('.amt').forEach(a=>a.onclick=()=>{document.querySelectorAll('.amt').forEach(x=>x.classList.remove('active'));a.classList.add('active');});
 </script>
+<script src="module-inspector.js?v=1"></script>
 </body>
 </html>

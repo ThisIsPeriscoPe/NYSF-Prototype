@@ -14,9 +14,13 @@ A static, fully navigable redesign prototype for the National Youth Science Foru
 - `assets/` — images and logo used by the site.
 - `index.html` (root) — redirect to the prototype.
 
+## Developer handover
+
+**Start with `HANDOVER.md`** — it explains the package, the build approach, and links the full doc set in `docs/`.
+
 ## Dev notes
 
-See **DEV-NOTES.md** for what is placeholder, what needs custom development, what depends on plugin choices, and what NYSF must be able to edit in the CMS.
+See **HANDOVER.md** for what is placeholder, what is custom or plugin-dependent, and what the build team is expected to deliver.
 
 ## Notes
 
